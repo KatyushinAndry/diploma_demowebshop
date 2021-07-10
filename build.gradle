@@ -10,7 +10,12 @@ repositories {
 
 def allureVersion = "2.13.9",
     selenideVersion = "5.20.1",
-    junitVersion = "5.7.1"
+    junitVersion = "5.7.1",
+    aspectjVersion = "1.9.6",
+    ownerVersion = "1.0.12",
+    restAssuredVersion = "4.3.1",
+    lombokVersion = "1.18.20",
+    jacksonVersion = "2.11.2"
 
 allure {
     version = allureVersion
@@ -24,14 +29,19 @@ allure {
 
 dependencies {
     testImplementation(
-            "org.aspectj:aspectjweaver:1.9.6",
             "com.codeborne:selenide:$selenideVersion",
-            "io.qameta.allure:allure-selenide:$allureVersion",
-            "io.rest-assured:rest-assured:4.3.1",
-            "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "org.aeonbits.owner:owner:1.0.12",
             "org.assertj:assertj-core:3.19.0",
-            "org.junit.jupiter:junit-jupiter-api:$junitVersion")
+            "org.aspectj:aspectjweaver:$aspectjVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 
@@ -44,7 +54,6 @@ tasks.withType(JavaCompile) {
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
-//    systemProperty "chromeoptions.prefs", "intl.accept_languages=en"
 
     if (System.getProperty("threads") != null) {
         systemProperties += [

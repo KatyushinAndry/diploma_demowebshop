@@ -1,13 +1,16 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.config.Project;
+import cloud.autotests.config.demowebshop.AppConfig;
 import cloud.autotests.helpers.AllureAttachments;
 import cloud.autotests.helpers.DriverSettings;
 import cloud.autotests.helpers.DriverUtils;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,14 +18,19 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
+
+    static AppConfig appConfig = ConfigFactory.create
+            (AppConfig.class, System.getProperties());
+
     @BeforeAll
-    static void setUp() {
+    static void setUp(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
+        Configuration.baseUrl = appConfig.webUrl();
     }
 
     @AfterEach
-    public void addAttachments() {
+    public void addAttachments(){
         String sessionId = DriverUtils.getSessionId();
 
         AllureAttachments.addScreenshotAs("Last screenshot");
