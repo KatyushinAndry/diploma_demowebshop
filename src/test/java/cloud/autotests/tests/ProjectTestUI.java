@@ -41,7 +41,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Books' item via CATEGORIES ")
+    @DisplayName("Check that the 'Books' item was opened via CATEGORIES ")
     void testOpenedBooksItem(){
         step("Open main page", () ->
                 open(""));
@@ -59,7 +59,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Computers' item via CATEGORIES ")
+    @DisplayName("Check that the 'Computers' was opened item via CATEGORIES ")
     void testOpenedComputersItem(){
         step("Open main page", () ->
                 open(""));
@@ -77,7 +77,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Electronics' item via CATEGORIES ")
+    @DisplayName("Check that the 'Electronics' item  was opened via CATEGORIES ")
     void testOpenedElectronicsItem(){
         step("Open main page", () ->
                 open(""));
@@ -95,7 +95,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Apparel & Shoes' item via CATEGORIES ")
+    @DisplayName("Check that the 'Apparel & Shoes' item  was opened via CATEGORIES ")
     void testOpenedApparelShoesItem(){
         step("Open main page", () ->
                 open(""));
@@ -113,7 +113,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Digital downloads' item via CATEGORIES ")
+    @DisplayName("Check that the 'Digital downloads' item was opened via CATEGORIES ")
     void testOpenedDigitalDownloadsItem(){
         step("Open main page", () ->
                 open(""));
@@ -131,7 +131,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Jewelry' item via CATEGORIES ")
+    @DisplayName("Check that the 'Jewelry' item  was opened via CATEGORIES ")
     void testOpenedJewelryItem(){
         step("Open main page", () ->
                 open(""));
@@ -149,7 +149,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Gift Cards' item via CATEGORIES ")
+    @DisplayName("Check that the 'Gift Cards' item  was opened via CATEGORIES ")
     void testOpenedGiftCardsItem(){
         step("Open main page", () ->
                 open(""));
@@ -167,7 +167,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Desktops' item via CATEGORIES ")
+    @DisplayName("Check that the 'Desktops' item was opened via CATEGORIES ")
     void testOpenedDesktopsItem(){
         step("Open main page", () ->
                 open(""));
@@ -187,7 +187,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Desktops' item via CATEGORIES ")
+    @DisplayName("Check that the 'Desktops' item  was opened via CATEGORIES ")
     void testOpenedNotebooksItem(){
         step("Open main page", () ->
                 open(""));
@@ -207,7 +207,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Accessories' item via CATEGORIES ")
+    @DisplayName("Check that the 'Accessories' item  was opened via CATEGORIES ")
     void testOpenedAccessoriesItem(){
         step("Open main page", () ->
                 open(""));
@@ -227,7 +227,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Camera, photo' item via CATEGORIES ")
+    @DisplayName("Check that the 'Camera, photo' item was opened via CATEGORIES ")
     void testOpenedCameraPhotoItem(){
         step("Open main page", () ->
                 open(""));
@@ -247,7 +247,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check opened 'Cell phones' item via CATEGORIES ")
+    @DisplayName("Check that the 'Cell phones' item was opened via CATEGORIES ")
     void testOpenedPhoneItem(){
         step("Open main page", () ->
                 open(""));
