@@ -41,7 +41,7 @@ gradle clean
 gradle clean -Dthreads=5
 ```
 ### Видео о прохождении тестов
--
+![Selenoid](src/test/resources/files/Selenoid.gif)
 
 ### Запуск в Jenkins
 Статистика по запускам
@@ -54,7 +54,8 @@ gradle clean -Dthreads=5
 
 ### Хранение тест-кейсов в Allure TestOps
 Ручные и автотесты
--
+![Allure](src/test/resources/files/Allure_TO_1.png)
+![Allure](src/test/resources/files/Allure_TO_2.png)
 Дашборд
 ![Allure](src/test/resources/files/Allure_dash.png)
 Ланчи
@@ -64,7 +65,7 @@ gradle clean -Dthreads=5
 
 ### Интерграция с Jira
 Отображение тест-кейсов и ланча
--
+![Jira](src/test/resources/files/jira.png)
 
 ### Уведомления в Telegram
 ![Telegram](src/test/resources/files/telegram.png)
