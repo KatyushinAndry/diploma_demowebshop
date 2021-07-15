@@ -5,6 +5,8 @@ import cloud.autotests.listener.TestListener;
 import cloud.autotests.pages.MainPages;
 import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -21,6 +23,8 @@ public class ProjectTestUI extends TestBase {
 
     //@JiraIssues({@JiraIssue("QC5-5")})
     @AllureId("3649")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -37,6 +41,8 @@ public class ProjectTestUI extends TestBase {
 
     //@JiraIssues({@JiraIssue("QC5-5")})
     @AllureId("3653")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -55,6 +61,8 @@ public class ProjectTestUI extends TestBase {
     }
     //@JiraIssues({@JiraIssue("QC5-5")})
     @AllureId("3654")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -73,6 +81,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3655")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -91,6 +101,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3656")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -109,6 +121,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3657")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -127,6 +141,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3658")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -145,6 +161,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3659")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -163,6 +181,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3660")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -183,6 +203,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3661")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -203,6 +225,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3662")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -223,6 +247,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3663")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -243,6 +269,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3664")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -252,17 +280,18 @@ public class ProjectTestUI extends TestBase {
         step("Open main page", () ->
                 open(""));
 
-        step("Seleck 'Cell phones' item", () ->{
-            mainPages.opensTabs("Electronics")
-                    .opensTabs("Cell phones");
-        });
-
-        step("Check 'Accessories' item was open", () ->
-                mainPages.checkOpenedPage("Home / Electronics / Cell phones"));
+            step("Seleck 'Cell phones' item", () ->{
+                mainPages.opensTabs("Electronics")
+                        .opensTabs("Cell phones");
+            });
+                step("Check 'Accessories' item was open", () ->
+                        mainPages.checkOpenedPage("Home / Electronics / Cell phones"));
 
     }
 
     @AllureId("3665")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -282,6 +311,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3666")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")
@@ -300,6 +331,8 @@ public class ProjectTestUI extends TestBase {
     }
 
     @AllureId("3667")
+    @Tags({@Tag("high"), @Tag("UI")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("UI")

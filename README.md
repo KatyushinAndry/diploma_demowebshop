@@ -45,26 +45,26 @@ gradle clean -Dthreads=5
 
 ### Запуск в Jenkins
 Статистика по запускам
--
+![Jenkins](src/test/resources/files/Jenkins_1.png)
 Указание параметров для запуска
--
+![Jenkins](src/test/resources/files/Jenkins_2.png)
 
 ### Отчёт в Allure Report
--
+![Allure](src/test/resources/files/AllureReport.png)
 
 ### Хранение тест-кейсов в Allure TestOps
 Ручные и автотесты
 -
 Дашборд
--
+![Allure](src/test/resources/files/Allure_dash.png)
 Ланчи
--
+![Allure](src/test/resources/files/Allure_laun.png)
 Результат запуска ланча
--
+![Allure](src/test/resources/files/Allure_laun2.png)
 
 ### Интерграция с Jira
 Отображение тест-кейсов и ланча
 -
 
 ### Уведомления в Telegram
--
+![Telegram](src/test/resources/files/telegram.png)

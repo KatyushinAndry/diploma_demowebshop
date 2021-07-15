@@ -2,11 +2,14 @@ package cloud.autotests.tests;
 
 import cloud.autotests.annotations.AutoMember;
 import cloud.autotests.annotations.Component;
+import cloud.autotests.annotations.JiraIssue;
 import cloud.autotests.annotations.ManualMember;
 import cloud.autotests.listener.TestListener;
 import cloud.autotests.model.AddToCartResponse;
 import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.Cookie;
@@ -35,6 +38,8 @@ public class ProjectTestsAPI extends TestBase {
 
     //@JiraIssues({@JiraIssue("QC5-5")})
     @AllureId("3650")
+    @Tags({@Tag("critical"), @Tag("api")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("API")
@@ -56,6 +61,8 @@ public class ProjectTestsAPI extends TestBase {
 
     //@JiraIssues({@JiraIssue("QC5-5")})
     @AllureId("3651")
+    @Tags({@Tag("critical"), @Tag("api")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("API+UI")
@@ -65,30 +72,32 @@ public class ProjectTestsAPI extends TestBase {
         step("Open main page", () ->
                 open(""));
 
-        step("Check that the shopping cart is empty", () ->
-                $("#topcartlink .cart-qty").shouldBe(text("(0)")));
+            step("Check that the shopping cart is empty", () ->
+                    $("#topcartlink .cart-qty").shouldBe(text("(0)")));
 
-        step("Get cookie from ui webDriver", () ->
-                cookie = getWebDriver().manage().getCookieNamed("Nop.customer").getValue());
+                step("Get cookie from ui webDriver", () ->
+                        cookie = getWebDriver().manage().getCookieNamed("Nop.customer").getValue());
 
-        step("Add product to cart via api", () ->
-                response = post("/addproducttocart/details/72/1",
-                        simpleComputer, 200, "Nop.customer", cookie)
-                        .as(AddToCartResponse.class));
-        sleep(5000);
+                    step("Add product to cart via api", () ->
+                            response = post("/addproducttocart/details/72/1",
+                                    simpleComputer, 200, "Nop.customer", cookie)
+                                    .as(AddToCartResponse.class));
+                    sleep(5000);
 
-        step("Check that the product is added via api", () -> {
-            assertThat(response.isSuccess(), is(true));
-            assertThat(response.getUpdatetopcartsectionhtml(), is("(1)"));
-        });
+                        step("Check that the product is added via api", () -> {
+                            assertThat(response.isSuccess(), is(true));
+                            assertThat(response.getUpdatetopcartsectionhtml(), is("(1)"));
+                        });
 
-        step("Check that the product is added via ui", () -> {
-            open("");
-            $("#topcartlink .cart-qty").shouldBe(text("(1)"));
-        });
+                            step("Check that the product is added via ui", () -> {
+                                open("");
+                                $("#topcartlink .cart-qty").shouldBe(text("(1)"));
+                            });
     }
 
     @AllureId("3652")
+    @Tags({@Tag("critical"), @Tag("api")})
+    @JiraIssue("QC5-8")
     @ManualMember("c05-katyushun")
     @AutoMember("katyushin")
     @Component("API+UI")
