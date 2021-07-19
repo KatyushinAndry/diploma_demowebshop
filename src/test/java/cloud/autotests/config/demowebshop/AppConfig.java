@@ -15,5 +15,19 @@ public interface AppConfig extends org.aeonbits.owner.Config {
     @Key("apiUrl")
     String apiUrl();
 
+    @Key("userLogin")
+    String userLogin();
+
+    @Key("userPassword")
+    String userPassword();
+
+    @Key("giftCard")
+    String giftCard();
+
+    @Key("simpleComputer")
+    String simpleComputer();
+
+    @Key("cookiAothorization")
+    String cookiAothorization();
 
 }

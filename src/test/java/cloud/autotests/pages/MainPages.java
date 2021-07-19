@@ -11,7 +11,8 @@ public class MainPages {
         $(".listbox").$(byText(text)).click();
         return this;
     }
-    public MainPages checkOpenedPage(String text) {
+
+    public MainPages checkOpenedPage(String text){
         $(".breadcrumb").shouldHave(text(text));
         return this;
     }
@@ -23,6 +24,7 @@ public class MainPages {
         $(".login-button").click();
         return this;
     }
+
     public MainPages errorMessage(String text){
         $(".validation-summary-errors").shouldHave(text(text));
         return this;
@@ -32,7 +34,8 @@ public class MainPages {
         $(".header-links").$(byText(text)).click();
         return this;
     }
-    public MainPages validationMessage(String selector, String text) {
+
+    public MainPages validationMessage(String selector, String text){
         $(selector).shouldHave(text(text));
         return this;
     }

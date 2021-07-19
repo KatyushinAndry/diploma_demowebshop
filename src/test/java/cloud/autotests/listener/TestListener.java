@@ -21,39 +21,39 @@ public class TestListener implements TestWatcher, BeforeAllCallback, BeforeEachC
     private PrintStream responseVar = new PrintStream(response, true);
 
     @Override
-    public void beforeAll(ExtensionContext context) {
+    public void beforeAll(ExtensionContext context){
         RestAssured.filters(new ResponseLoggingFilter(LogDetail.ALL, responseVar),
                 new RequestLoggingFilter(LogDetail.ALL, requestVar));
     }
 
     @Override
-    public void beforeEach(ExtensionContext context) {
+    public void beforeEach(ExtensionContext context){
 
     }
 
     @Override
-    public void testSuccessful(ExtensionContext context) {
+    public void testSuccessful(ExtensionContext context){
         logRequest(request);
         logResponse(response);
     }
 
     @Override
-    public void testFailed(ExtensionContext context, Throwable cause) {
+    public void testFailed(ExtensionContext context, Throwable cause){
         logRequest(request);
         logResponse(response);
     }
 
     @Attachment(value = "request", type = "application/json")
-    public byte[] logRequest(ByteArrayOutputStream stream) {
+    public byte[] logRequest(ByteArrayOutputStream stream){
         return attach(stream);
     }
 
     @Attachment(value = "response", type = "application/json")
-    public byte[] logResponse(ByteArrayOutputStream stream) {
+    public byte[] logResponse(ByteArrayOutputStream stream){
         return attach(stream);
     }
 
-    public byte[] attach(ByteArrayOutputStream log) {
+    public byte[] attach(ByteArrayOutputStream log){
         byte[] array = log.toByteArray();
         log.reset();
         return array;

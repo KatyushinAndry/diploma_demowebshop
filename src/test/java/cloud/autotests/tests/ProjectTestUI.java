@@ -1,6 +1,9 @@
 package cloud.autotests.tests;
 
-import cloud.autotests.annotations.*;
+import cloud.autotests.annotations.AutoMember;
+import cloud.autotests.annotations.Component;
+import cloud.autotests.annotations.JiraIssue;
+import cloud.autotests.annotations.ManualMember;
 import cloud.autotests.listener.TestListener;
 import cloud.autotests.pages.MainPages;
 import io.qameta.allure.AllureId;
@@ -59,6 +62,7 @@ public class ProjectTestUI extends TestBase {
                 mainPages.checkOpenedPage("Home / Books"));
 
     }
+
     //@JiraIssues({@JiraIssue("QC5-5")})
     @AllureId("3654")
     @Tags({@Tag("high"), @Tag("UI")})
@@ -192,10 +196,10 @@ public class ProjectTestUI extends TestBase {
         step("Open main page", () ->
                 open(""));
 
-        step("Seleck 'Desktops' item", () ->{
-                mainPages.opensTabs("Computers")
-                         .opensTabs("Desktops");
-                });
+        step("Seleck 'Desktops' item", () -> {
+            mainPages.opensTabs("Computers")
+                    .opensTabs("Desktops");
+        });
 
         step("Check 'Desktops' item was open", () ->
                 mainPages.checkOpenedPage("Home / Computers / Desktops"));
@@ -214,7 +218,7 @@ public class ProjectTestUI extends TestBase {
         step("Open main page", () ->
                 open(""));
 
-        step("Seleck 'Notebooks' item", () ->{
+        step("Seleck 'Notebooks' item", () -> {
             mainPages.opensTabs("Computers")
                     .opensTabs("Notebooks");
         });
@@ -236,7 +240,7 @@ public class ProjectTestUI extends TestBase {
         step("Open main page", () ->
                 open(""));
 
-        step("Seleck 'Accessories' item", () ->{
+        step("Seleck 'Accessories' item", () -> {
             mainPages.opensTabs("Computers")
                     .opensTabs("Accessories");
         });
@@ -258,7 +262,7 @@ public class ProjectTestUI extends TestBase {
         step("Open main page", () ->
                 open(""));
 
-        step("Seleck 'Camera, photo' item", () ->{
+        step("Seleck 'Camera, photo' item", () -> {
             mainPages.opensTabs("Electronics")
                     .opensTabs("Camera, photo");
         });
@@ -280,12 +284,12 @@ public class ProjectTestUI extends TestBase {
         step("Open main page", () ->
                 open(""));
 
-            step("Seleck 'Cell phones' item", () ->{
-                mainPages.opensTabs("Electronics")
-                        .opensTabs("Cell phones");
-            });
-                step("Check 'Accessories' item was open", () ->
-                        mainPages.checkOpenedPage("Home / Electronics / Cell phones"));
+        step("Seleck 'Cell phones' item", () -> {
+            mainPages.opensTabs("Electronics")
+                    .opensTabs("Cell phones");
+        });
+        step("Check 'Accessories' item was open", () ->
+                mainPages.checkOpenedPage("Home / Electronics / Cell phones"));
 
     }
 
@@ -302,7 +306,7 @@ public class ProjectTestUI extends TestBase {
                 open(""));
 
         step("Login with incorrect credentials", () ->
-            mainPages.incorrectLogin());
+                mainPages.incorrectLogin());
 
         step("Check correct error message", () ->
                 mainPages.errorMessage("Login was unsuccessful. Please correct the errors and try again.\n" +
@@ -326,7 +330,7 @@ public class ProjectTestUI extends TestBase {
                 mainPages.opensHeaderTabs("Shopping cart"));
 
         step("Check that the cart was empty by default", () ->
-                mainPages.validationMessage(".order-summary-content","Your Shopping Cart is empty!"));
+                mainPages.validationMessage(".order-summary-content", "Your Shopping Cart is empty!"));
 
     }
 
@@ -346,7 +350,7 @@ public class ProjectTestUI extends TestBase {
                 mainPages.opensHeaderTabs("Wishlist"));
 
         step("Check that the Wishlist was empty by default", () ->
-                mainPages.validationMessage(".wishlist-content","The wishlist is empty!\n"));
+                mainPages.validationMessage(".wishlist-content", "The wishlist is empty!\n"));
 
     }
 }

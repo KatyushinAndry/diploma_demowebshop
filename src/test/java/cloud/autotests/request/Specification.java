@@ -11,18 +11,18 @@ import org.aeonbits.owner.ConfigFactory;
 
 public class Specification {
 
-    static AppConfig driverConfig = ConfigFactory.create
-            (AppConfig.class, System.getProperties());
+    static AppConfig appConfig = ConfigFactory.create(
+            AppConfig.class, System.getProperties());
 
-    public static RequestSpecification getRequestSpecification() {
+    public static RequestSpecification getRequestSpecification(){
         return new RequestSpecBuilder()
-                .setBaseUri(driverConfig.apiUrl())
+                .setBaseUri(appConfig.apiUrl())
                 .setContentType(ContentType.URLENC)
                 .log(LogDetail.ALL)
                 .build();
     }
 
-    public static ResponseSpecification getResponseSpecification() {
+    public static ResponseSpecification getResponseSpecification(){
         return new ResponseSpecBuilder()
                 .log(LogDetail.ALL)
                 .build();

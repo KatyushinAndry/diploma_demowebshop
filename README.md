@@ -55,15 +55,21 @@ gradle clean -Dthreads=5
 ![Selenoid](src/files/Selenoid.gif)
 
 ### Запуск в Jenkins
+https://jenkins.autotests.cloud/job/c05_katyushin_edit_diploma/
+
 Статистика по запускам
 ![Jenkins](src/files/Jenkins_1.png)
 Указание параметров для запуска
 ![Jenkins](src/files/Jenkins_2.png)
 
 ### Отчёт в Allure Report
+https://jenkins.autotests.cloud/job/c05_katyushin_edit_diploma/8/allure/#
+
 ![Allure](src/files/AllureReport.png)
 
 ### Хранение тест-кейсов в Allure TestOps
+https://allure.autotests.cloud/project/262/test-cases?treeId=554 
+
 Ручные и автотесты
 ![Allure](src/files/Allure_TO_1.png)
 ![Allure](src/files/Allure_TO_2.png)
@@ -75,6 +81,8 @@ gradle clean -Dthreads=5
 ![Allure](src/files/Allure_laun2.png)
 
 ### Интерграция с Jira
+https://jira.autotests.cloud/browse/QC5-8
+
 Отображение тест-кейсов и ланча
 ![Jira](src/files/jira.png)
 

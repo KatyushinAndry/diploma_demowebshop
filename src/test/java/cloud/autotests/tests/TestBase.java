@@ -19,8 +19,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
 
-    static AppConfig appConfig = ConfigFactory.create
-            (AppConfig.class, System.getProperties());
+    static AppConfig appConfig = ConfigFactory.create(
+            AppConfig.class, System.getProperties());
 
     @BeforeAll
     static void setUp(){

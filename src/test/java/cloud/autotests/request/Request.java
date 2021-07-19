@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 
 public class Request {
 
-    public static Response post(String path, String body, Integer statusCode,String cookieName, String cookie) {
+    public static Response post(String path, String body, Integer statusCode, String cookieName, String cookie){
         return given()
                 .spec(Specification.getRequestSpecification())
                 .body(body)
