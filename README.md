@@ -1,10 +1,21 @@
 # qa_guru_5_24_katyushin_diploma_demowebshop
 # Автотесты на http://demowebshop.tricentis.com
 
-![Intelij_IDEA](src/test/resources/files/icons/Intelij_IDEA.png)![Java](src/test/resources/files/icons/Java.png)![Selenide](src/test/resources/files/icons/Selenide.png)![Selenoid](src/test/resources/files/icons/Selenoid.png)![Gradle](src/test/resources/files/icons/Gradle.png)![JUnit5](src/test/resources/files/icons/JUnit5.png)![Allure Report](src/test/resources/files/icons/Allure_Report.png)![AllureTestOps](src/test/resources/files/icons/AllureTestOps.png)![Github](src/test/resources/files/icons/Github.png)![Jenkins](src/test/resources/files/icons/Jenkins.png)![Rest-Assured](src/test/resources/files/icons/Rest-Assured.png)![Telegram](src/test/resources/files/icons/Telegram.png)![Jira](src/test/resources/files/icons/Jira.png)
+![Java](src/files/icons/Java.png)
+![Gradle](src/files/icons/Gradle.png)
+![JUnit5](src/files/icons/JUnit5.png)
+![Rest-Assured](src/files/icons/Rest-Assured.png)
+![Selenide](src/files/icons/Selenide.png)
+![Intelij_IDEA](src/files/icons/Intelij_IDEA.png)
+![Github](src/files/icons/Github.png)
+![Selenoid](src/files/icons/Selenoid.png)
+![Jenkins](src/files/icons/Jenkins.png)
+![Allure Report](src/files/icons/Allure_Report.png)
+![AllureTestOps](src/files/icons/AllureTestOps.png)
+![Jira](src/files/icons/Jira.png)
+![Telegram](src/files/icons/Telegram.png)
 
-IntelliJ IDEA, Java, Selenide, Selenoid, Gradle, JUnit5, Allure Report, Allure TestOps, Github, Jenkins, Rest-Assured,
-Telegram (reports), Jira.
+Java, Gradle, JUnit5, Rest-Assured, Selenide, IntelliJ IDEA, Github, Selenoid, Jenkins, Allure Report, Allure TestOps, Jira, Telegram (reports).
 
 ## Реализованы проверки:
 В реализации использованы разные подходы проектирования, позволяющие достичь разного представления в отчетах
@@ -41,31 +52,31 @@ gradle clean
 gradle clean -Dthreads=5
 ```
 ### Видео о прохождении тестов
-![Selenoid](src/test/resources/files/Selenoid.gif)
+![Selenoid](src/files/Selenoid.gif)
 
 ### Запуск в Jenkins
 Статистика по запускам
-![Jenkins](src/test/resources/files/Jenkins_1.png)
+![Jenkins](src/files/Jenkins_1.png)
 Указание параметров для запуска
-![Jenkins](src/test/resources/files/Jenkins_2.png)
+![Jenkins](src/files/Jenkins_2.png)
 
 ### Отчёт в Allure Report
-![Allure](src/test/resources/files/AllureReport.png)
+![Allure](src/files/AllureReport.png)
 
 ### Хранение тест-кейсов в Allure TestOps
 Ручные и автотесты
-![Allure](src/test/resources/files/Allure_TO_1.png)
-![Allure](src/test/resources/files/Allure_TO_2.png)
+![Allure](src/files/Allure_TO_1.png)
+![Allure](src/files/Allure_TO_2.png)
 Дашборд
-![Allure](src/test/resources/files/Allure_dash.png)
+![Allure](src/files/Allure_dash.png)
 Ланчи
-![Allure](src/test/resources/files/Allure_laun.png)
+![Allure](src/files/Allure_laun.png)
 Результат запуска ланча
-![Allure](src/test/resources/files/Allure_laun2.png)
+![Allure](src/files/Allure_laun2.png)
 
 ### Интерграция с Jira
 Отображение тест-кейсов и ланча
-![Jira](src/test/resources/files/jira.png)
+![Jira](src/files/jira.png)
 
 ### Уведомления в Telegram
-![Telegram](src/test/resources/files/telegram.png)
+![Telegram](src/files/telegram.png)

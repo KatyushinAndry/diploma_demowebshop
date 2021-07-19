@@ -209,7 +209,7 @@ public class ProjectTestUI extends TestBase {
     @AutoMember("katyushin")
     @Component("UI")
     @Test
-    @DisplayName("Check that the 'Desktops' item  was opened via CATEGORIES ")
+    @DisplayName("Check that the 'Notebooks' item  was opened via CATEGORIES ")
     void testOpenedNotebooksItem(){
         step("Open main page", () ->
                 open(""));
