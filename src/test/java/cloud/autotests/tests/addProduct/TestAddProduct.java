@@ -1,4 +1,4 @@
-package cloud.autotests.tests.AddProduct;
+package cloud.autotests.tests.addProduct;
 
 import cloud.autotests.annotations.AutoMember;
 import cloud.autotests.annotations.Component;

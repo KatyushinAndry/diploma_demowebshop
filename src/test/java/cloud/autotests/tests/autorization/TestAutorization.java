@@ -1,4 +1,4 @@
-package cloud.autotests.tests.Autorization;
+package cloud.autotests.tests.autorization;
 
 import cloud.autotests.annotations.AutoMember;
 import cloud.autotests.annotations.Component;

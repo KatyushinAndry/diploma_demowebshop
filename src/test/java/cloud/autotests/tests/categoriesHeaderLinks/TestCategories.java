@@ -1,4 +1,4 @@
-package cloud.autotests.tests.CategoriesHeaderLinks;
+package cloud.autotests.tests.categoriesHeaderLinks;
 
 import cloud.autotests.annotations.AutoMember;
 import cloud.autotests.annotations.Component;
