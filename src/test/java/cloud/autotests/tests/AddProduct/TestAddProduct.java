@@ -1,4 +1,4 @@
-package cloud.autotests.tests;
+package cloud.autotests.tests.AddProduct;
 
 import cloud.autotests.annotations.AutoMember;
 import cloud.autotests.annotations.Component;
@@ -6,6 +6,8 @@ import cloud.autotests.annotations.JiraIssue;
 import cloud.autotests.annotations.ManualMember;
 import cloud.autotests.listener.TestListener;
 import cloud.autotests.model.AddToCartResponse;
+import cloud.autotests.pages.MainPages;
+import cloud.autotests.tests.TestBase;
 import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -25,9 +27,9 @@ import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-
 @ExtendWith(TestListener.class)
-public class ProjectTestsAPI extends TestBase {
+public class TestAddProduct extends TestBase {
+    MainPages mainPages = new MainPages();
 
     public String
             cookie,
@@ -35,30 +37,6 @@ public class ProjectTestsAPI extends TestBase {
     public AddToCartResponse
             response,
             responseAuth;
-
-    @AllureId("3650")
-    @Tags({@Tag("critical"), @Tag("api")})
-    @JiraIssue("QC5-8")
-    @ManualMember("c05-katyushun")
-    @AutoMember("katyushin")
-    @Component("API")
-    @Test
-    @DisplayName("AUTHORIZATION via api")
-    void testAuthorizationAPI(){
-
-        step("Get cookie by api and set it to browser", () -> {
-            String authorizationCookie = authorization();
-            step("Open minimal content, because cookie can be set with site opened", () ->
-                    open("/Themes/DefaultClean/Content/images/logo.png"));
-            getWebDriver().manage().addCookie(new Cookie("NOPCOMMERCE.AUTH", authorizationCookie));
-            step("Open main page", () -> {
-                open("");
-                $(".topic-html-content-header").shouldHave(text("Welcome to our store"));
-            });
-            step("Verify successful authorization", () ->
-                    $(".account").shouldHave(text("a.katyushin@gmail.com")));
-        });
-    }
 
     @AllureId("3651")
     @Tags({@Tag("critical"), @Tag("api")})
@@ -131,5 +109,4 @@ public class ProjectTestsAPI extends TestBase {
 //            $("#topcartlink .cart-qty").shouldBe(text("(1)"));
 //        });
     }
-
 }
